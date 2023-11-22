@@ -1,6 +1,6 @@
 import React from 'react';
 import {createRoot} from 'react-dom/client';
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
 import Home from "./components/pages/Home"
 import Blog from "./components/pages/Blog"
 import About from "./components/pages/About"
@@ -20,7 +20,8 @@ function Main() {
                 <Route path="/blog" element={<Blog/>}/>
                 <Route path="/about" element={<About/>}/>
                 <Route path="/contact" element={<Contact/>}/>
-                <Route element={<NotFound/>}/>
+                <Route path="notfound" element={<NotFound />} />
+                <Route path="*" element={<Navigate to="/notfound" replace />} />
             </Routes>
         </Router>
     )
