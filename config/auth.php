@@ -112,4 +112,11 @@ return [
 
     'password_timeout' => 10800,
 
+
+
+    /*
+     * The amount of minutes the cookie before it expires.
+     */
+    'cookie_ttl' => 1440,
+
 ];

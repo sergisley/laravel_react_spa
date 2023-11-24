@@ -1,0 +1,37 @@
+### empty login attempt
+POST http://localhost:8000/api/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "",
+    "password": ""
+}
+
+### invalid login attempt
+POST http://localhost:8000/api/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "john@test.com",
+    "password": "123"
+}
+
+
+### valid login attempt
+POST http://localhost:8000/api/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "john@test.com",
+    "password": "Aa123456!"
+}
+
+### logout
+POST http://localhost:8000/api/logout
+Content-Type: application/json
+Accept: application/json
+Cookie: 8|7Cg3mrKtr3dfGJoAsJjUcslto2dXbwvhEmb42IeMcg53265f18;
+

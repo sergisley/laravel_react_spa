@@ -1,0 +1,16 @@
+### invalid user data request
+# @no-cookie-jar
+GET http://localhost:8000/api/user
+Content-Type: application/json
+Accept: application/json
+Cookie: xxx
+
+### valid user data request
+# @no-cookie-jar
+GET http://localhost:8000/api/user
+Accept: application/json
+Cookie: token=9%7CpjVkBsF0yqL4RJ7vZenmVTnvE9qrTgJQcS56a2bq4dd5d135; expires=Sat, 25 Nov 2023 03:10:36 GMT; Max-Age=86400; path=/; domain=localhost; httponly; samesite=lax
+Content-Type: application/json
+
+
+

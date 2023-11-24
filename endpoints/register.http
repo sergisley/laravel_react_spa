@@ -1,0 +1,28 @@
+### empty register request
+POST http://localhost:8000/api/register
+Content-Type: application/json
+Accept: application/json
+
+
+### invalid password
+POST http://localhost:8000/api/register
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "john johnson",
+    "email": "john@test.com",
+    "password": "123"
+}
+
+### valid register request
+POST http://localhost:8000/api/register
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "john johnson",
+    "email": "john@test.com",
+    "password": "Aa123456!",
+    "password_confirmation": "Aa123456!"
+}
