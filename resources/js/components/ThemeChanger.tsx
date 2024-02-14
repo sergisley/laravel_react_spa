@@ -1,6 +1,6 @@
 import {useEffect} from 'react'
 import {Select, Theme} from 'react-daisyui'
-import { themeChange } from 'theme-change'
+import {themeChange} from 'theme-change'
 
 export const ThemeSelector = () => {
 
@@ -18,12 +18,15 @@ export const ThemeSelector = () => {
 
     return (
         <>
-            <Select size={'sm'} data-choose-theme>
-                <option value={'default'} disabled>
+            <div className="form-control bg-transparent border-0 max-w-xs">
+                <label className="label label-text text-base-content text-xs p-1">
                     Selecione um tema
-                </option>
-                {themes.map(makeItem)}
-            </Select>
+                </label>
+                <Select size={'sm'} data-choose-theme
+                        className="text-base-content select input-bordered select-xs ">
+                    {themes.map(makeItem)}
+                </Select>
+            </div>
         </>
     )
 }
