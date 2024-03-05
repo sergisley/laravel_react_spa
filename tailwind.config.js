@@ -16,11 +16,10 @@ module.exports = {
                 '2xl': '6rem',
             },
         },
-
-
     },
     plugins: [
-        require("@tailwindcss/typography"), require("daisyui")
+        require("@tailwindcss/typography"),
+        require("daisyui")
     ],
     daisyui: {
         themes: true,

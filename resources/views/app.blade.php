@@ -10,9 +10,10 @@
     </title>
 
     @vitereactrefresh
+
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body>
+<body class="bg-base-300 text-base-content">
 <div id="app"></div>
-</body>
+</body>...
 </html>
