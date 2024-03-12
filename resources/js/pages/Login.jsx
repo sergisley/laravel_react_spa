@@ -5,6 +5,7 @@ import {useAuth} from '../contexts/AuthContext';
 import {ThemeSelector} from '../components/ThemeChanger';
 import {Button, Input, Hero, Card} from 'react-daisyui';
 import {ErrorAlert} from "../components/forms/ErrorAlert.jsx";
+import {bottom} from "@popperjs/core";
 
 export default function Login() {
 
@@ -33,7 +34,7 @@ export default function Login() {
     };
 
     return (
-        <Hero className='p-2 bg-base-200 min-h-full h-full items-center'>
+        <Hero className='bg-base-300 min-h-full h-full items-center' style={{margin:'0 0 -23px 0'}}>
             <Hero.Content
                 className='flex lg:flex-row-reverse flex-col items-center px-6 py-8 mx-auto md:h-screen lg:py-0 justify-center'>
 

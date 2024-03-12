@@ -88,7 +88,7 @@ export default function MainNavbar({...props}) {
                 </Navbar.Start>
                 <Navbar.End className="hidden lg:flex navbar-end">
                     <Menu horizontal={true} className="flex px-1">
-                        <Menu.Item className='mt-2'>
+                        <Menu.Item>
                             <NavLink
                                 to="/dashboard"
                                 className={({isActive}) =>
@@ -101,7 +101,7 @@ export default function MainNavbar({...props}) {
                         </Menu.Item>
                         <Menu.Item>
                             <Dropdown end>
-                                <Button tag="label" tabIndex={0} color="ghost" className="avatar text-xl">
+                                <Button tag="label" tabIndex={0} color="ghost" className="avatar text-3xl">
                                     <PiUserSquareDuotone/>
                                 </Button>
                                 <Dropdown.Menu
@@ -123,6 +123,7 @@ export default function MainNavbar({...props}) {
                                             Logout
                                         </Button>
                                     </Dropdown.Item>
+
                                 </Dropdown.Menu>
                             </Dropdown>
                         </Menu.Item>

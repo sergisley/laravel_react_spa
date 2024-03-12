@@ -3,6 +3,8 @@ module.exports = {
     content: [
         "./resources/**/*.blade.php",
         "./resources/**/*.{js,ts,jsx,tsx}",
+        'node_modules/daisyui/dist/**/*.js',
+        'node_modules/react-daisyui/dist/**/*.js',
     ],
     darkMode: 'media',
     theme: {

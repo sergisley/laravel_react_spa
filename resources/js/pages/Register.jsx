@@ -55,7 +55,7 @@ export default function Register() {
     };
 
     return (
-        <Hero>
+        <Hero className="bg-base-300" style={{margin:'0 0 -23px 0'}}>
             <Hero.Content className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
                 <a
                     href="#"

@@ -10,7 +10,7 @@ export default function MainDrawer({children}) {
     }, []);
 
     return <Drawer  open={visible} onClickOverlay={toggleVisible} side={
-        <Menu className="p-4 w-80 h-full bg-secondary text-secondary-content">
+        <Menu className="p-4 w-80 h-full bg-secondary text-secondary-content lg:flex">
             <Menu.Item>
                 <a>Sidebar Item 1</a>
             </Menu.Item>
@@ -19,8 +19,8 @@ export default function MainDrawer({children}) {
             </Menu.Item>
         </Menu>
     }>
-        <Button color="primary" onClick={toggleVisible} className="lg:hidden">
-            Open drawer
+        <Button color="primary" onClick={toggleVisible} className="">
+           >
         </Button>
         {children}
     </Drawer>

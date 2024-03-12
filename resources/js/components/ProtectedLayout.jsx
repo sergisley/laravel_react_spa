@@ -16,18 +16,21 @@ export default function DefaultLayout() {
 
     return (
         <>
-            <MainNavbar/>
+            <div className="flex flex-col min-h-screen">
 
-            <MainDrawer>
+                <MainNavbar/>
 
-                <Outlet/>
+                <MainDrawer className="flex-grow">
 
-                <MainFooter>
+                    <Outlet/>
+
+                </MainDrawer>
+
+                <MainFooter className="mt-auto">
                     <ThemeSelector/>
                 </MainFooter>
-            </MainDrawer>
 
-
+            </div>
         </>
     );
 }
