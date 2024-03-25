@@ -5,7 +5,6 @@ import {useAuth} from '../contexts/AuthContext';
 import {ThemeSelector} from '../components/ThemeChanger';
 import {Button, Input, Hero, Card} from 'react-daisyui';
 import {ErrorAlert} from "../components/forms/ErrorAlert.jsx";
-import {bottom} from "@popperjs/core";
 
 export default function Login() {
 
@@ -29,6 +28,9 @@ export default function Login() {
         } catch (error) {
             if (error.response.status === 401) {
                 setError(error.response.data.message);
+            }else{
+                setError("O sistema encontrou um erro. Por favor tente novamente mais tarde");
+                console.log(error.response.data)
             }
         }
     };

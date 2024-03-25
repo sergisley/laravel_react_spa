@@ -4,8 +4,8 @@ import About from './pages/About';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
 import Register from './pages/Register';
-import ProtectedLayout from './components/ProtectedLayout';
-import GuestLayout from './components/GuestLayout';
+import ProtectedLayout from './components/layout/ProtectedLayout.jsx';
+import GuestLayout from './components/layout/GuestLayout.jsx';
 
 const router = createBrowserRouter([
     {

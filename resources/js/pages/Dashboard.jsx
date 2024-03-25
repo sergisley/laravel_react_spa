@@ -1,13 +1,21 @@
 import React from 'react';
-import { useAuth } from '../contexts/AuthContext';
+import PageTitle from "@/components/PageTitle.jsx";
+import ContentContainer from "@/components/ContentContainer.jsx";
 
 export default function Dashboard() {
-    const { user } = useAuth();
     return (
         <>
-            <div className="container">
-                <h2 className=' w-100 p-3 text-xl-center'>Dashboard</h2>
-            </div>
+            <PageTitle title={'Painel'}/>
+            <ContentContainer>
+                    <h5 className={`my-2 text-2xl font-bold tracking-tight block`}>
+                        wabba
+                    </h5>
+                    <h6>
+                        dabba
+                    </h6>
+                    <h6>du</h6>
+
+            </ContentContainer>
         </>
     );
 }

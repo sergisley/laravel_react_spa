@@ -28,23 +28,23 @@ export const ThemeSelector = () => {
 
     const makeItem = function (name, index) {
 
-        return <li className="flex-auto" key={index}>
-            <input type="radio"
-                   name="theme-dropdown"
-                   className="btn btn-sm btn-block btn-ghost
-                   justify-start text-base-content"
-                   aria-label={name}
-                   checked={name === currentTheme}
-                   value={name}
-                   onChange={(e) => handleThemeChange(e)}
-            />
-        </li>
+        return <input
+            key={index}
+            type="radio"
+            name="theme-buttons"
+            className="btn theme-controller join-item btn-xs"
+            aria-label={name}
+            checked={name === currentTheme}
+            value={name}
+            onChange={(e) => handleThemeChange(e)}
+        />
+
     };
 
     return (
         <>
             <div className="dropdown dropdown-top fixed bottom-5 right-5">
-                <div tabIndex={0} role="button" className="btn m-1" onClick={handleDropdownClick}>
+            <div tabIndex={0} role="button" className="btn m-1 btn-sm text-xs" onClick={handleDropdownClick}>
                     Tema
                     <svg width="12px"
                          height="12px"
@@ -54,13 +54,12 @@ export const ThemeSelector = () => {
                         <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
                     </svg>
                 </div>
-                <ul tabIndex={0} className="dropdown-content z-[1] p-2 shadow-2xl
-                 bg-base-300 w-52 flex flex-wrap right-0">
+                <div className="join join-vertical dropdown-content z-[1] p-2 shadow-2xl w-auto flex flex-wrap right-0">
                     {themes.map(makeItem)}
-                </ul>
+                </div>
             </div>
         </>
-    )
+    );
 }
 
 
